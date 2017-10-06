@@ -10,6 +10,6 @@
         <TextBox x:Name="tbxScore" HorizontalAlignment="Left" Height="23" Margin="299,82,0,0" TextWrapping="Wrap" Text="
                  " VerticalAlignment="Top" Width="120"/>
         <Label x:Name="lblScore" Content="Please Enter Score:" HorizontalAlignment="Left" Margin="112,79,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnCheck" Content="Check Score" HorizontalAlignment="Left" Margin="191,165,0,0" VerticalAlignment="Top" Width="114" Height="61"/>
+        <Button x:Name="btnCheck" Content="Check Score" HorizontalAlignment="Left" Margin="191,165,0,0" VerticalAlignment="Top" Width="114" Height="61" Click="btnCheck_Click"/>
     </Grid>
 </Window>

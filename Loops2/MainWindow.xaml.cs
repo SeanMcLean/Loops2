@@ -20,10 +20,26 @@ namespace Loops2
     /// </summary>
     public partial class MainWindow : Window
     {
+        int Score;
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        private void btnCheck_Click(object sender, RoutedEventArgs e)
+        {
+            Score = int.Parse(tbxScore.Text);
+
+            if (Score == 100 )
+            {
+                MessageBox.Show("Well Done");
+            }
+            else
+            {
+                MessageBox.Show("Hard Luck");
+            }
+           // MessageBox.Show("Result: " + Score);
+
+        }
     }
 }
