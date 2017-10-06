@@ -20,7 +20,6 @@ namespace Loops2
     /// </summary>
     public partial class MainWindow : Window
     {
-        int Score;
         public MainWindow()
         {
             InitializeComponent();
@@ -28,18 +27,106 @@ namespace Loops2
 
         private void btnCheck_Click(object sender, RoutedEventArgs e)
         {
-            Score = int.Parse(tbxScore.Text);
+            /*  int Score = int.Parse(tbxScore.Text);
 
-            if (Score == 100 )
+              if (Score == 100 )
+              {
+                  MessageBox.Show("Well Done");
+              }
+              else
+              {
+                  MessageBox.Show("Hard Luck");
+              }
+              */
+            // MessageBox.Show("Result: " + Score);
+           /* try
             {
-                MessageBox.Show("Well Done");
+                string Score = tbxScore.Text.Trim();
+                if (Score == "100")
+                {
+                    MessageBox.Show("Well Done");
+                }
+                else
+                {
+                    MessageBox.Show("Hard Luck");
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Hard Luck");
-            }
-           // MessageBox.Show("Result: " + Score);
 
+                MessageBox.Show("Promblem With textbox");
+            }*/
+
+//check score through single if statements 
+           /* try
+            {
+               int Score = Convert.ToInt16(tbxScore.Text);
+                if (Score == 100)
+                {
+                    MessageBox.Show("Perfct Score");
+                }
+                if (Score >= 90 && Score <= 100)
+                {
+                    MessageBox.Show("You got an A");
+                }
+                if (Score >= 80 && Score < 90)
+                {
+                    MessageBox.Show("You got a B");
+                }
+                if (Score >= 70 && Score < 80)
+                {
+                    MessageBox.Show("You got a C");
+                }
+                if (Score >= 60 && Score < 70)
+                {
+                    MessageBox.Show("You got a D");
+                }
+                if (Score < 60)
+                {
+                    MessageBox.Show("You got an F");
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Promblem With textbox");
+            }*/
+
+//checks through scores with else if 
+            try
+            {
+                int Score = Convert.ToInt16(tbxScore.Text);
+                if (Score == 100)
+                {
+                    MessageBox.Show("Perfct Score");
+                }
+                else if (Score >= 90)
+                {
+                    MessageBox.Show("You got an A");
+                }
+                else if (Score >= 80)
+                {
+                    MessageBox.Show("You got a B");
+                }
+                else if (Score >= 70)
+                {
+                    MessageBox.Show("You got a C");
+                }
+                else if (Score >= 60)
+                {
+                    MessageBox.Show("You got a D");
+                }
+                else if (Score < 60)
+                {
+                    MessageBox.Show("You got an F");
+                }
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Promblem With textbox");
+            }
         }
     }
 }
